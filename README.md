@@ -6,14 +6,18 @@
 - `cd pronestheus`
 - Update `.env` 
 - Build the docker image and run 
+
+```bash
+# clean past instances if they exist 
+docker-compose down --rmi all --volumes --remove-orphans
+
+# build and start container 
+docker-compose up -d --build --force-recreate
 ```
-docker buildx create --use
-docker buildx build --platform linux/amd64 -t grdl/pronestheus:latest --load .
-docker-compose up -d --build
-```
 
+## Thermostat API Docs 
 
-
+- https://developers.google.com/nest/device-access/api/thermostat
 
 
 
